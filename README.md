@@ -1,0 +1,2 @@
+# TrickBuzz
+ TrickBuzz WP Theme
