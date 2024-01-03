@@ -1,6 +1,6 @@
 <?php
 
-// Add custom fields to user profile page
+// ******************* Custom fields to user profile page ******************* //
 function add_user_social_fields($user)
 {
 ?>
@@ -73,21 +73,7 @@ add_action('edit_user_profile_update', 'save_user_social_fields');
 
 
 
-// Theme Directory URL
-$theme_directory_url = get_template_directory_uri();
-
-function remove_unwanted_head_links()
-{
-    remove_action('wp_head', 'rest_output_link_wp_head', 10); // Removes the REST API link
-    remove_action('wp_head', 'rsd_link'); // Removes the Really Simple Discovery link
-    remove_action('wp_head', 'wp_generator'); // Removes the WordPress generator meta tag
-}
-
-add_action('after_setup_theme', 'remove_unwanted_head_links');
-
-
-/* Remove WP Core Emoji */
-
+// ******************* Remove WP Core Emoji ******************* //
 function remove_wp_emojicons()
 {
     // Remove the emoji styles and scripts
@@ -107,8 +93,7 @@ add_action('init', 'remove_wp_emojicons');
 
 
 
-/* Remove WP Default CSS */
-
+// ******************* Remove WP Default CSS ******************* //
 function remove_default_styles()
 {
     wp_deregister_style('global-styles');
@@ -119,42 +104,42 @@ add_action('wp_enqueue_scripts', 'remove_default_styles', 100);
 
 
 
-/* Wordpress admin bar remove */
+// ******************* Remove WP Admin Bar ******************* //
 show_admin_bar(false);
 
-/* Enable Post Thumbnails */
+
+
+
+// ******************* Enable Post Thumbnails ******************* //
 if (function_exists('add_theme_support')) {
     add_theme_support('post-thumbnails');
     add_image_size('custom-thumb', 100, 60, true);
 }
 
-/* Post View Count */
 
-// Get the post views count
+
+
+// ******************* Post View Count ******************* //
 function getPostViews($postID)
 {
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-
-    if (empty($count)) {
+    if ($count == '') {
         delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, 0, true); // Ensure an integer is stored
-        return 0;
+        add_post_meta($postID, $count_key, '0');
+        return "0";
     }
-
-    return (int)$count; // Ensure the return value is an integer
+    return $count . ' ';
 }
 
-// Set the post views count
 function setPostViews($postID)
 {
     $count_key = 'post_views_count';
     $count = get_post_meta($postID, $count_key, true);
-
-    if (empty($count)) {
+    if ($count == '') {
         $count = 0;
         delete_post_meta($postID, $count_key);
-        add_post_meta($postID, $count_key, $count, true); // Ensure an integer is stored
+        add_post_meta($postID, $count_key, '0');
     } else {
         $count++;
         update_post_meta($postID, $count_key, $count);
@@ -162,7 +147,8 @@ function setPostViews($postID)
 }
 
 
-// Custom Login Logo Link
+
+// ******************* Custom Login Logo Link ******************* //
 function custom_login_logo_url($url)
 {
     return 'https://trickbuzz.net';
@@ -170,7 +156,8 @@ function custom_login_logo_url($url)
 add_filter('login_headerurl', 'custom_login_logo_url');
 
 
-/* Custom login page logo */
+
+// ******************* Custom Login Logo ******************* //
 function custom_login_logo()
 {
     echo '<style type="text/css">h1 a { background-image: url(' . get_bloginfo('template_directory') . '/img/login-logo.png) !important; background-size: 80% auto !important;
@@ -179,12 +166,13 @@ width: 280px !important; height: 75px !important; }</style>';
 add_action('login_head', 'custom_login_logo');
 
 
-// ChatGPT Pagination
+
+// ******************* ChatGPT Pagination ******************* //
 function pagination()
 {
     global $wp_query;
 
-    $big = 999999999; // This needs to be an unlikely integer
+    $big = 999999999;
 
     $paginate_links = paginate_links(array(
         'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
@@ -196,7 +184,6 @@ function pagination()
         'next_text' => __('»'),
     ));
 
-    // Display pagination only if there's more than one page
     if ($paginate_links) {
         echo '<div class="pagination">';
         echo $paginate_links;
@@ -205,8 +192,8 @@ function pagination()
 }
 
 
-// Adsense Code Auto Inserter [adsense_article]
 
+// ******************* Adsense Code Auto Inserter [adsense_article] ******************* //
 function adsense_article_shortcode()
 {
     ob_start(); ?>

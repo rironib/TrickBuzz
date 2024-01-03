@@ -1,11 +1,16 @@
 <style>
     main {
-        margin-top: 2rem;
+        margin-top: 2rem !important;
     }
 </style>
 
 <main>
     <div class="container">
+
+        <h1>
+            <?php echo get_search_query(); ?>
+        </h1>
+
         <div class="ads">
             <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2274017621360737" data-ad-slot="7108747523"></ins>
             <script>
