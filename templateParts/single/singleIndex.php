@@ -86,16 +86,17 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="ads">
+                    <!-- multiplex_horizontal -->
+                    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-2274017621360737" data-ad-slot="6730253827"></ins>
+                    <script>
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
         <?php endwhile;
         endif; ?>
-
-        <div class="ads">
-            <!-- multiplex_horizontal -->
-            <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-2274017621360737" data-ad-slot="6730253827"></ins>
-            <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
 
     </div>
 </main>
