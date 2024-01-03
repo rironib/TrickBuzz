@@ -51,8 +51,6 @@
                     </script>
                 </div>
 
-
-
                 <div class="singleAuthorBox">
                     <?php echo get_avatar(get_the_author_meta('email'), '65'); ?>
                     <div class="singleAuthorInfo">
