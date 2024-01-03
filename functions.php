@@ -203,3 +203,20 @@ function pagination()
         echo '</div>';
     }
 }
+
+
+// Adsense Code Auto Inserter [adsense_article]
+
+function adsense_article_shortcode()
+{
+    ob_start(); ?>
+    <div class="ads">
+        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-2274017621360737" data-ad-slot="7108747523"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+<?php
+    return ob_get_clean();
+}
+add_shortcode('adsense_article', 'adsense_article_shortcode');
