@@ -473,8 +473,14 @@ img {
   vertical-align: middle;
 }
 .postExcerpt {
+  display: none;
   text-align: justify;
   color: #dee2e6;
+}
+@media (min-width: 768px) {
+  .postExcerpt {
+    display: block;
+  }
 }
 
 /* Post Content */
