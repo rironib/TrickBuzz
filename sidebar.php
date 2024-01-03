@@ -72,8 +72,8 @@
                  </div>
 
                  <ul class="menu_items submenu">
-                     <a href="<?php echo home_url(); ?>/wordpress/theme/" class="nav_link sublink">Theme</a>
-                     <a href="<?php echo home_url(); ?>/wordpress/plugin/" class="nav_link sublink">Plugin</a>
+                     <a href="<?php echo home_url(); ?>/wp/theme/" class="nav_link sublink">Theme</a>
+                     <a href="<?php echo home_url(); ?>/wp/plugin/" class="nav_link sublink">Plugin</a>
                  </ul>
              </li>
 
@@ -87,7 +87,7 @@
                  </div>
 
                  <ul class="menu_items submenu">
-                     <a href="<?php echo home_url(); ?>/cms/php-script/" class="nav_link sublink">PHP Script</a>
+                     <a href="<?php echo home_url(); ?>/cms/php/" class="nav_link sublink">PHP Script</a>
                      <a href="<?php echo home_url(); ?>/cms/whmcs/" class="nav_link sublink">WHMCS</a>
                      <a href="<?php echo home_url(); ?>/cms/drupal/" class="nav_link sublink">Drupal</a>
                      <a href="<?php echo home_url(); ?>/cms/joomla/" class="nav_link sublink">Joomla</a>
@@ -161,6 +161,7 @@
                      <a href="<?php echo home_url(); ?>/contact/" class="nav_link sublink">Contact</a>
                      <a href="<?php echo home_url(); ?>/newsletter/" class="nav_link sublink">Newsletter</a>
                      <a href="<?php echo home_url(); ?>/privacy-policy/" class="nav_link sublink">Privacy Policy</a>
+                     <a href="<?php echo home_url(); ?>/deletion-request/" class="nav_link sublink">Delete Post</a>
                      <a href="<?php echo home_url(); ?>/sitemap/" class="nav_link sublink">Sitemap</a>
                  </ul>
              </li>
@@ -176,8 +177,6 @@
                  <ul class="menu_items submenu">
                      <a href="https://app.trickbuzz.net/" target="_blank" class="nav_link sublink">App</a>
                      <a href="https://blog.trickbuzz.net/" target="_blank" class="nav_link sublink">Blog</a>
-                     <a href="https://us.trickbuzz.net/" target="_blank" class="nav_link sublink">US Blog</a>
-                     <a href="https://nl.trickbuzz.net/" target="_blank" class="nav_link sublink">NL Blog</a>
                  </ul>
              </li>
          </ul>
