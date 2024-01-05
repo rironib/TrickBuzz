@@ -14,7 +14,7 @@
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737" data-overlays="bottom" crossorigin="anonymous"></script>
 
    <script src="<?php echo get_template_directory_uri();
-                  ?>/scripts/main.js"></script>
+                  ?>/scripts/main.js" async></script>
 
    <?php wp_head(); ?>
 
