@@ -436,8 +436,7 @@ img {
   .postInfo {
     display: flex;
     flex-direction: column;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 2rem;
   }
 }
 .postCard .postCat {
@@ -508,6 +507,7 @@ img {
   border-radius: 0.5rem;
 }
 .singleInfo .postCat a {
+  text-transform: uppercase;
   color: #725feb;
 }
 .postTitle {
