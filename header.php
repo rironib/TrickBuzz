@@ -14,10 +14,17 @@
    <link rel="preconnect" href="https://unpkg.com">
    <link async href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737" data-overlays="bottom" crossorigin="anonymous"></script>
 
-   <script async src="<?php echo get_template_directory_uri();
-                        ?>/scripts/main.js"></script>
+
+   <!-- <script>
+      if (window.innerWidth <= 767) {
+         sidebar.classList.add("close");
+      } else {
+         sidebar.classList.add("close", "hoverable");
+      }
+   </script> -->
+
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737" data-overlays="bottom" crossorigin="anonymous"></script>
 
    <?php wp_head(); ?>
 

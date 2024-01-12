@@ -1,4 +1,3 @@
-const body = document.querySelector("body");
 const darkLight = document.querySelector("#darkLight");
 const sidebar = document.querySelector(".sidebar");
 const submenuItems = document.querySelectorAll(".submenu_item");
@@ -53,27 +52,27 @@ submenuItems.forEach((item, index) => {
   });
 });
 
-// if (window.innerWidth <= 767) {
-//   // When window width is less than or equal to 768, close the sidebar
-//   sidebar.classList.add("close");
-// } else {
-//   // When window width is more than 768, use hoverable behavior
-//   sidebar.classList.add("close", "hoverable");
-// }
-
-// Set initial sidebar state based on window width
-function setInitialSidebarState() {
-  if (window.innerWidth <= 767) {
-    // When window width is less than or equal to 768, close the sidebar
-    sidebar.classList.add("close");
-  } else {
-    // When window width is more than 768, use hoverable behavior
-    sidebar.classList.add("close", "hoverable");
-  }
+if (window.innerWidth <= 768) {
+  // When window width is less than or equal to 768, close the sidebar
+  sidebar.classList.add("close");
+} else {
+  // When window width is more than 768, use hoverable behavior
+  sidebar.classList.add("close", "hoverable");
 }
 
-// Event listener for window resize
-window.addEventListener("resize", setInitialSidebarState);
+// // Set initial sidebar state based on window width
+// function setInitialSidebarState() {
+//   if (window.innerWidth <= 767) {
+//     // When window width is less than or equal to 768, close the sidebar
+//     sidebar.classList.add("close");
+//   } else {
+//     // When window width is more than 768, use hoverable behavior
+//     sidebar.classList.add("close", "hoverable");
+//   }
+// }
 
-// Set initial sidebar state on page load
-setInitialSidebarState();
+// // Event listener for window resize
+// window.addEventListener("resize", setInitialSidebarState);
+
+// // Set initial sidebar state on page load
+// setInitialSidebarState();

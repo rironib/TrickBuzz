@@ -13,7 +13,16 @@
                 }
                 ?>
             </p>
+            <script>
+                const bioInfo = document.querySelector(".authorDesc");
+                const bioText = bioInfo.textContent;
+
+                if (bioText.length > 150) {
+                    bioInfo.textContent = bioText.slice(0, 150) + "...";
+                }
+            </script>
         </div>
+
         <div class="authorInfo">
             <?php if (!empty($facebook_url)) : ?>
                 <a href="<?php echo esc_url($facebook_url); ?>" target="_blank" title="Facebook">
