@@ -35,6 +35,7 @@
 
       <div class="navbar_content">
          <i class='bx bx-bell'></i>
+         <i class='bx bx-sun' id="darkLight"></i>
          <?php
          if (is_user_logged_in()) {
             $current_user = wp_get_current_user();
