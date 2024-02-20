@@ -13,7 +13,7 @@ License: GPL 3.0
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Lexend", sans-serif;
 }
 :root {
   --white-color: #fff;
@@ -956,7 +956,7 @@ i.bxl-twitter {
 }
 
 .errorContainer h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Lexend", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
   color: #3498db;

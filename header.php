@@ -9,20 +9,10 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link async href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 
    <link rel="preconnect" href="https://unpkg.com">
    <link async href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
-
-
-   <!-- <script>
-      if (window.innerWidth <= 767) {
-         sidebar.classList.add("close");
-      } else {
-         sidebar.classList.add("close", "hoverable");
-      }
-   </script> -->
 
    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2274017621360737" data-overlays="bottom" crossorigin="anonymous"></script>
 
@@ -45,8 +35,6 @@
 
       <div class="navbar_content">
          <i class='bx bx-bell'></i>
-         <i class='bx bx-sun' id="darkLight"></i>
-         <!-- <i class='bx bxs-grid-alt'></i> -->
          <?php
          if (is_user_logged_in()) {
             $current_user = wp_get_current_user();
