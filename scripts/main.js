@@ -1,6 +1,4 @@
-// const darkLight = document.querySelector("#darkLight");
 const sidebar = document.getElementById("sidebar");
-// const sidebar = document.querySelector(".sidebar");
 const submenuItems = document.querySelectorAll(".submenu_item");
 const sidebarOpen = document.querySelector("#sidebarOpen");
 const sidebarClose = document.querySelector(".collapse_sidebar");
@@ -34,13 +32,6 @@ sidebar.addEventListener("mouseleave", () => {
   }
 });
 
-// Toggle dark/light mode
-// darkLight.addEventListener("click", () => {
-//   body.classList.toggle("dark");
-//   darkLight.classList.toggle("bx-sun");
-//   darkLight.classList.toggle("bx-moon");
-// });
-
 // Handle submenu item clicks
 submenuItems.forEach((item, index) => {
   item.addEventListener("click", () => {
@@ -54,26 +45,7 @@ submenuItems.forEach((item, index) => {
 });
 
 if (window.innerWidth <= 768) {
-  // When window width is less than or equal to 768, close the sidebar
   sidebar.classList.add("close");
 } else {
-  // When window width is more than 768, use hoverable behavior
   sidebar.classList.add("close", "hoverable");
 }
-
-// // Set initial sidebar state based on window width
-// function setInitialSidebarState() {
-//   if (window.innerWidth <= 767) {
-//     // When window width is less than or equal to 768, close the sidebar
-//     sidebar.classList.add("close");
-//   } else {
-//     // When window width is more than 768, use hoverable behavior
-//     sidebar.classList.add("close", "hoverable");
-//   }
-// }
-
-// // Event listener for window resize
-// window.addEventListener("resize", setInitialSidebarState);
-
-// // Set initial sidebar state on page load
-// setInitialSidebarState();
