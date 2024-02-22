@@ -1,5 +1,5 @@
  <!-- sidebar -->
- <nav class="sidebar">
+ <nav id="sidebar">
      <div class="menu_content">
          <ul class="menu_items">
              <div class="menu_title"></div>
