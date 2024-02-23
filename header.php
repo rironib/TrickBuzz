@@ -36,10 +36,12 @@
 
       <div class="navbar_content">
          <!-- <i class='bx bx-bell'></i> -->
-
          <?php
          if (is_user_logged_in()) {
             echo '<a href="' . esc_url(home_url()) . '/wp-admin/" title="Dashboard">
+                     <i class="ri-dashboard-line"></i>
+                  </a>
+                  <a href="' . wp_logout_url(home_url()) . '" title="Logout">
                      <i class="ri-dashboard-line"></i>
                   </a>';
             $current_user = wp_get_current_user();
@@ -48,9 +50,6 @@
          } else {
             echo '<a href="' . esc_url(home_url()) . '/wp-login.php" title="Login">
                      <i class="ri-login-box-line"></i>
-                  </a>
-                  <a href="' . esc_url(home_url()) . '/wp-login.php?action=register" title="Register">
-                     <i class="ri-logout-box-r-line"></i>
                   </a>';
          }
          ?>
