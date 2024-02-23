@@ -146,12 +146,17 @@ p {
   .navbar_content {
     column-gap: 1rem;
   }
+  .navbar_content i {
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--grey-color);
+  }
 }
-@media (max-width: 376px) {
+/* @media (max-width: 376px) {
   .navbar_content .bx-bell {
     display: none;
   }
-}
+} */
 
 /* sidebar */
 #sidebar {
