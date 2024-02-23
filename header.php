@@ -38,21 +38,19 @@
 
          <?php
          if (is_user_logged_in()) {
-            echo '<a href="' . esc_url(home_url()) . '/wp-admin/">
+            echo '<a href="' . esc_url(home_url()) . '/wp-admin/" title="Dashboard">
                      <i class="bx bxs-dashboard"></i>
-                  </a>';
+                  </a>
+                  $current_user = wp_get_current_user();
+                  $avatar = get_avatar($current_user->ID, 65);
+                  echo $avatar;';
          } else {
-            echo '<a href="' . esc_url(home_url()) . '/wp-login.php">
+            echo '<a href="' . esc_url(home_url()) . '/wp-login.php" title="Login">
                      <i class="bx bx-log-in"></i>
-                  </a>';
-         }
-         ?>
-
-         <?php
-         if (is_user_logged_in()) {
-            $current_user = wp_get_current_user();
-            $avatar = get_avatar($current_user->ID, 65);
-            echo $avatar;
+                  </a>
+                  <a href="' . esc_url(home_url()) . '/wp-login.php?action=register" title="Register">
+                  <i class="bx bx-log-in"></i>
+               </a>';
          }
          ?>
       </div>
