@@ -11,28 +11,6 @@
                      <span class="navlink">Home</span>
                  </a>
              </li>
-
-             <?php
-                if (is_user_logged_in()) {
-                    echo '<li class="item">
-                            <a href="' . esc_url(home_url()) . '/wp-admin/" class="nav_link">
-                                <span class="navlink_icon">
-                                    <i class="bx bxs-dashboard"></i>
-                                </span>
-                                <span class="navlink">Panel</span>
-                            </a>
-                        </li>';
-                } else {
-                    echo '<li class="item">
-                            <a href="' . esc_url(home_url()) . '/wp-login.php" class="nav_link">
-                                <span class="navlink_icon">
-                                    <i class="bx bx-log-in"></i>
-                                </span>
-                                <span class="navlink">Login</span>
-                            </a>
-                        </li>';
-                }
-                ?>
          </ul>
 
          <ul class="menu_items">

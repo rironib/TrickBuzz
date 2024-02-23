@@ -34,7 +34,20 @@
       </form>
 
       <div class="navbar_content">
-         <i class='bx bx-bell'></i>
+         <!-- <i class='bx bx-bell'></i> -->
+
+         <?php
+         if (is_user_logged_in()) {
+            echo '<a href="' . esc_url(home_url()) . '/wp-admin/">
+                     <i class="bx bxs-dashboard"></i>
+                  </a>';
+         } else {
+            echo '<a href="' . esc_url(home_url()) . '/wp-login.php">
+                     <i class="bx bx-log-in"></i>
+                  </a>';
+         }
+         ?>
+
          <?php
          if (is_user_logged_in()) {
             $current_user = wp_get_current_user();
