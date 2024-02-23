@@ -40,17 +40,17 @@
          if (is_user_logged_in()) {
             echo '<a href="' . esc_url(home_url()) . '/wp-admin/" title="Dashboard">
                      <i class="bx bxs-dashboard"></i>
-                  </a>
-                  $current_user = wp_get_current_user();
-                  $avatar = get_avatar($current_user->ID, 65);
-                  echo $avatar;';
+                  </a>';
+            $current_user = wp_get_current_user();
+            $avatar = get_avatar($current_user->ID, 65);
+            echo $avatar;
          } else {
             echo '<a href="' . esc_url(home_url()) . '/wp-login.php" title="Login">
                      <i class="bx bx-log-in"></i>
                   </a>
                   <a href="' . esc_url(home_url()) . '/wp-login.php?action=register" title="Register">
-                  <i class="bx bx-log-in"></i>
-               </a>';
+                     <i class="bx bx-log-in"></i>
+                  </a>';
          }
          ?>
       </div>
