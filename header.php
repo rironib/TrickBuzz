@@ -42,7 +42,7 @@
                      <i class="ri-dashboard-line"></i>
                   </a>
                   <a href="' . wp_logout_url(home_url()) . '" title="Logout">
-                     <i class="ri-dashboard-line"></i>
+                     <i class="ri-logout-box-line"></i>
                   </a>';
             $current_user = wp_get_current_user();
             $avatar = get_avatar($current_user->ID, 48);
