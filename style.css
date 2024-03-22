@@ -13,22 +13,25 @@ License: GPL 3.0
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Lexend", sans-serif;
 }
+
 :root {
   --white-color: #fff;
   --blue-color: #4070f4;
   --grey-color: #707070;
   --grey-color-light: #aaa;
 }
+
 body {
-  /* background-color: #e7f2fd; */
-  background-color: #f7eaff;
+  font-family: "Lexend", sans-serif;
+  background-color: #f7eaff; /* #e7f2fd; */
   transition: all 0.5s ease;
 }
+
 body.dark {
   background-color: #333;
 }
+
 body.dark {
   --white-color: #333;
   --blue-color: #fff;
@@ -82,7 +85,7 @@ p {
   margin-bottom: 1rem;
 }
 
-/* navbar */
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
