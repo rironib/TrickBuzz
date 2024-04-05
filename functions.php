@@ -207,3 +207,14 @@ function adsense_article_shortcode()
     return ob_get_clean();
 }
 add_shortcode('adsense_article', 'adsense_article_shortcode');
+
+
+
+// ******************* Disable XML-RPC ******************* //
+add_filter('xmlrpc_enabled', '__return_false');
+
+add_filter('xmlrpc_methods', function ($methods) {
+    unset($methods['pingback.ping']);
+    unset($methods['pingback.extensions.getPingbacks']);
+    return $methods;
+});
