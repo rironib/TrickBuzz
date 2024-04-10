@@ -25,10 +25,10 @@
 <body>
    <!-- navbar -->
    <nav class="navbar">
-      <div class="logo_item">
+      <h1 class="logo_item">
          <i class="bx bx-menu" id="sidebarOpen"></i>
          TrickBuzz
-      </div>
+      </h1>
 
       <form class="search_bar" action="<?php echo esc_url(home_url('/')); ?>">
          <input name="s" type="text" placeholder="Search" />

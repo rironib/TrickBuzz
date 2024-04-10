@@ -112,6 +112,7 @@ p {
   font-size: 22px;
   font-weight: 800;
   color: var(--blue-color);
+  margin: 0;
 }
 .navbar img {
   width: 20px;
