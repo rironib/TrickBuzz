@@ -12,7 +12,6 @@
             <h1 class="postTitle">
                 <?php the_title(); ?>
             </h1>
-            <hr>
             <div class="postContent">
                 <?php the_content(); ?>
             </div>
