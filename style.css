@@ -13,6 +13,7 @@ License: GPL 3.0
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lexend", sans-serif;
 }
 
 :root {
@@ -109,15 +110,16 @@ p {
   align-items: center;
   column-gap: 10px;
   font-family: "Atomic Age", cursive;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 800;
   color: var(--blue-color);
   margin: 0;
 }
 .navbar img {
-  width: 20px;
-  height: 20px;
+  width: auto;
+  height: auto;
   border-radius: 50%;
+  border: 1px solid var(--grey-color);
 }
 .search_bar {
   height: 47px;
@@ -127,13 +129,13 @@ p {
 .search_bar input {
   height: 100%;
   width: 100%;
-  border-radius: 25px;
+  border-radius: 0.5rem;
   font-size: 18px;
   outline: none;
   background-color: var(--white-color);
   color: var(--grey-color);
   border: 1px solid var(--grey-color-light);
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 .navbar_content {
   display: flex;
@@ -186,6 +188,7 @@ p {
 }
 .menu_content {
   position: relative;
+  padding-top: 1rem;
 }
 .menu_title {
   margin: 10px 0;

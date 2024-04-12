@@ -30,27 +30,25 @@
          TrickBuzz
       </h1>
 
-      <form class="search_bar" action="<?php echo esc_url(home_url('/')); ?>">
-         <input name="s" type="text" placeholder="Search" />
-      </form>
-
       <div class="navbar_content">
-         <!-- <i class='bx bx-bell'></i> -->
+         <form class="search_bar" action="<?php echo esc_url(home_url('/')); ?>">
+            <input name="s" type="text" placeholder="Search" />
+         </form>
          <?php
          if (is_user_logged_in()) {
             $current_user = wp_get_current_user();
-            $avatar = get_avatar($current_user->ID, 48);
+            $avatar = get_avatar($current_user->ID, 40);
             echo $avatar;
             echo '<a href="' . esc_url(home_url()) . '/wp-admin/" title="Dashboard">
-             <i class="ri-dashboard-line"></i>
-          </a>
-          <a href="' . wp_logout_url(home_url()) . '" title="Logout">
-             <i class="ri-logout-box-line"></i>
-          </a>';
+                     <i class="ri-apps-line"></i>
+                  </a>
+                  <a href="' . wp_logout_url(home_url()) . '" title="Logout">
+                     <i class="ri-logout-circle-r-line"></i>
+                  </a>';
          } else {
             echo '<a href="' . esc_url(home_url()) . '/wp-login.php" title="Login">
-             <i class="ri-login-box-line"></i>
-          </a>';
+                     <i class="ri-login-circle-line"></i>
+                  </a>';
          }
          ?>
       </div>
